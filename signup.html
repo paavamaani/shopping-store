@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title> Sign Up </title>
+
+<style>
+
+input[type=password], input[type=email] {
+
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0px;
+display: inline-block;
+border-radius: 8px;
+box-sizing: border-box;
+font-weight: bold;
+outline: none;
+border: 1px solid #4CAF50;
+
+
+}
+
+input[type=text] {
+
+width: 35%;
+padding: 12px 20px;
+margin: 8px 0px;
+display: inline-block;
+border-radius: 8px;
+box-sizing: border-box;
+font-weight: bold;
+border: 1px solid #4CAF50;
+outline: none;
+
+}
+
+input[type=submit] {
+
+width: 49%;
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+outline: none;
+float:left;
+
+}
+
+input[type=reset] {
+
+width: 49%;
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+outline: none;
+float:right;
+
+}
+
+input[type=password]:focus, input[type=email]:focus, input[type=text]:focus  {
+
+border: 1.89px solid black;
+
+}
+
+div {
+
+border-radius: 8px;
+padding: 40px;
+
+}
+
+fieldset {
+
+margin-left: 27.5%;
+margin-right: 27.5%;
+border: 4px solid #000000;
+background-color: #f9f9f9;
+
+}
+
+</style>
+
+<script>
+
+function Validate() {
+	
+	var val1 = document.forms["form"]["fname"].value;
+	
+	if(val1 == "") {
+	
+		alert("Enter First Name");
+		return false;
+		
+	}
+	
+	var val2 = document.forms["form"]["lname"].value;
+	
+	if(val2 == "") {
+	
+		alert("Enter Last Name");
+		return false;
+		
+	}
+	
+	var val3 = document.forms["form"]["email"].value;
+	
+	if(val3 == "") {
+	
+		alert("Enter Email");
+		return false;
+		
+	}
+	
+	var val4 = document.forms["form"]["password"].value;
+	
+	if(val4 == "") {
+		
+		alert("Password is required");
+		return false;
+	
+	}
+	
+	var val5 = document.forms["form"]["confirmpassword"].value;
+	
+	if(val5 == "") {
+	
+		alert("Please confirm your Password");
+		return false;
+	}	
+	
+	if(val4==val5) {
+	
+		alert("Sucessfully Signed Up");
+		return true;
+	}
+	else {
+	
+		alert("Password and Confirm Password don't match");
+		return false;
+
+	}
+}
+
+</script>
+
+</head>
+
+<body>
+
+	<img src="C:\Users\Paavamaani Manchala\Pictures\Saved Pictures/logo3.jpg" alt="United Colors of Benetton" style="width: 10%;height: 5%;margin-left: 30%">
+	<img src="C:\Users\Paavamaani Manchala\Pictures\Saved Pictures/logo.png" alt="United Colors of Benetton" style="width: 28%;height: 14%;margin-right: 30%">
+
+<div>
+
+<form action="" method="post" name="form" >
+
+
+	<fieldset>
+
+		<legend> <h2> Sign Up </h2> </legend> <br> <br>
+		
+		<label>
+			<strong> First Name </strong>
+			<input type="text" name="fname" placeholder="Enter first name">
+			<p id="fname1"></p>
+		</label> 
+
+		<label>
+			<strong> Last Name </strong>
+			<input type="text" name="lname" placeholder="Enter last name">
+		</label> <br>
+
+		<label> <br>
+			<strong> Email </strong> <br>
+			<input type="email" name="email" placeholder="Enter email">
+		</label> <br> <br>
+		
+		<label>
+			<strong> Enter your Password </strong> <br>
+			<input type="password" name="password" placeholder="Enter password">
+		</label> <br> <br>
+
+		<label>
+			<strong> Confirm your Password </strong> <br>
+			<input type="password" name="confirmpassword" placeholder="Re - enter password">
+		</label> <br> <br>
+	
+	 <br>
+
+	<center> <input type="submit" value="Sign Up" onclick="Validate()"> <input type="reset" value="Reset"> </center>
+	
+	</fieldset>
+
+</form>
+
+</div>
+			
+</body>
+
+</html>
